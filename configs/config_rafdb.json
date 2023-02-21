@@ -1,0 +1,22 @@
+{
+    "raf_path": "/kaggle/input/rafdbdata3",
+    "image_path": "aligned/aligned",
+    "label_path": "list_patition_label.txt",
+    "image_size": 224,
+    "n_channels": 3,
+    "n_classes": 7,
+    "model": "Resnet34_binet18",
+    "lr": 1e-04,
+    "weighted_loss": 0,
+    "device": "cuda:0",
+    "momentum": 0.9,
+    "weight_decay": 0.0001,
+    "distributed": 0,
+    "batch_size": 48,
+    "num_workers": 2,
+    "max_plateau_count": 24,
+    "max_epoch_num": 60,
+    "plateau_patience": 2,
+    "steplr": 50,
+    "project_name": "Rafdb_trainer_1"
+}
