@@ -1,10 +1,10 @@
 {
-    "data_path": "/kaggle/input/ferplusdata-2/fer2013.csv",
-    "data_labels": "/kaggle/input/ferplusdata-2/fer2013new.csv",
+    "data_path": "/input/ferplusdata/fer2013.csv",
+    "data_labels": "/input/ferplusdata/fer2013new.csv",
     "image_size": 224,
     "n_channels": 3,
     "n_classes": 7,
-    "model": "Resnet34_Bi18_Radam_113",
+    "model": "ResNet50",
     "lr": 0.0001,
     "weighted_loss": 0,
     "device": "cuda:0",
@@ -18,5 +18,5 @@
     "plateau_patience": 2,
     "steplr": 50,
     "log_dir": "log",
-    "project_name": "Ferplus_trainers_Binet2"
+    "project_name": "Ferplus_trainers"
 }
