@@ -14,7 +14,6 @@ model_urls = {
     "resnet50": "https://download.pytorch.org/models/resnet50-19c8e357.pth",
 }
 
-
 def up_pooling(in_channels, out_channels, kernel_size=3, stride=2, padding = 1):
     return nn.Sequential(
         nn.ConvTranspose2d(
@@ -181,8 +180,6 @@ class ConvBlock(nn.Module):
         out = self.relu(out)
         return out
 
-
-
 class MultiLevelAttention(nn.Module):
     def __init__(self, in_channels, out_channels):
         super().__init__()
@@ -195,7 +192,6 @@ class MultiLevelAttention(nn.Module):
         nn.init.kaiming_normal_(self.conv.weight, mode="fan_out", nonlinearity="sigmoid")
         nn.init.constant_(self.bn.weight, 1)
         nn.init.constant_(self.bn.bias, 0)
-
         
     def forward(self, x):
 
@@ -226,7 +222,6 @@ class DualDomainFusion(nn.Module):
         nn.init.constant_(self.bn1.weight, 1)
         nn.init.constant_(self.bn1.bias, 0)
                 
-
         nn.init.kaiming_normal_(self.conv2.weight, mode="fan_out", nonlinearity="sigmoid")
         nn.init.constant_(self.bn2.weight, 1)
         nn.init.constant_(self.bn2.bias, 0)

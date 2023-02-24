@@ -30,8 +30,6 @@ class DDANet34(ResNet):
 
         self.fc = nn.Linear(512, 7)
 
-
-
         self.DDA1 = DDABlock(64,512,1) 
         self.DDA2 = DDABlock(128,512,2) 
         self.DDA3 = DDABlock(256,512,3) 
@@ -49,11 +47,9 @@ class DDANet34(ResNet):
         m = self.DDA1(x)
         x = x * (1 + m)
 
-
         x = self.layer2(x)
         m = self.DDA2(x)
         x = x * (1 + m)
-
 
         x = self.layer3(x) 
         m = self.DDA3(x)
@@ -84,20 +80,15 @@ class DDAnet50(ResNet):
            block =  Bottleneck, layers = [3, 4, 6, 3], in_channels = 3,num_classes = 1000
            )
         
-
         state_dict = load_state_dict_from_url(model_urls['resnet50'], progress=True)
         self.load_state_dict(state_dict)
 
         self.fc = nn.Linear(2048, 7)
 
-
-
         self.DDA1 = DDABlock(256,612,1)
         self.DDA2 = DDABlock(512,612,2) 
         self.DDA3 = DDABlock(1024,612,3) 
         self.DDA4 = DDABlock(2048,612,4)
-
-    
 
     def forward(self, x):  
         x = self.conv1(x)  
@@ -108,22 +99,18 @@ class DDAnet50(ResNet):
         x = self.layer1(x)
         m = self.DDA1(x)
         x = x * (1 + m)
-        
 
         x = self.layer2(x)
         m = self.DDA2(x)
         x = x * (1 + m)
 
-
         x = self.layer3(x)  
         m = self.DDA3(x)
         x = x * (1 + m)
 
-
         x = self.layer4(x)
         m = self.DDA4(x)
         x = x * (1 + m)
-
 
         x = self.avgpool(x)
         x = torch.flatten(x, 1)
@@ -154,8 +141,6 @@ class DDAnet50_vggface(ResNet):
 
         self.fc = nn.Linear(2048, 7)
 
-
-
         self.DDA1 = DDABlock(256,612, 1)
         self.DDA2 = DDABlock(512,612, 2) 
         self.DDA3 = DDABlock(1024,612, 3) 
@@ -171,17 +156,14 @@ class DDAnet50_vggface(ResNet):
         m = self.DDA1(x)
         x = x * (1 + m)
   
-
         x = self.layer2(x)
         m = self.DDA2(x)
         x = x * (1 + m)
-
 
         x = self.layer3(x)  
         m = self.DDA3(x)
         x = x * (1 + m)
    
-
         x = self.layer4(x)
         m = self.DDA4(x)
         x = x * (1 + m)
@@ -192,7 +174,6 @@ class DDAnet50_vggface(ResNet):
 
         x = self.fc(x)
         return x
-
 
 def DDAnet50_vggface_dropout2(in_channels=3, num_classes=7):
     model = DDAnet50_vggface()

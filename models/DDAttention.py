@@ -25,10 +25,7 @@ class DDA1(nn.Module):
         self.outconv = nn.Conv2d(in_channels, in_channels, kernel_size = 1, bias = False)
         self.bn = nn.BatchNorm2d(in_channels)
         self.relu = nn.ReLU(inplace = True)
-
-
-                
-                
+ 
         nn.init.kaiming_normal_(self.outconv.weight, mode="fan_out", nonlinearity="sigmoid")
         if self.outconv.bias is not None:
           nn.init.constant_(self.outconv.bias, 0)
@@ -50,15 +47,12 @@ class DDA1(nn.Module):
         arm2 = self.arm2(pool3)
         arm2 = torch.mul(arm2 , avg_pool) 
 
-        
         arm1 = self.pool(arm1)
         out = torch.cat((arm1, arm2), dim = 1) 
 
         out = self.ffm(out_sp, out)
 
-
         out = self.up2(out)
-
         out = self.outconv(out)
         out = self.bn(out)
         out = self.relu(out)
@@ -73,7 +67,6 @@ class DDA2(nn.Module):
         self.conv1 = ConvBlock(in_channels, 512)
         self.conv2 = ConvBlock(512, 512)
         
-
         self.layers = LayersResnet18(128, in_channels)
         self.arm1 = MultiLevelAttention(256, 256)
         self.arm2 = MultiLevelAttention(512, 512)
@@ -86,8 +79,7 @@ class DDA2(nn.Module):
         self.outconv = nn.Conv2d(in_channels, in_channels, kernel_size = 1, bias = False)
         self.bn = nn.BatchNorm2d(in_channels)
         self.relu = nn.ReLU(inplace = True)
-    
-                
+      
         nn.init.kaiming_normal_(self.outconv.weight, mode="fan_out", nonlinearity="relu")
         if self.outconv.bias is not None:
           nn.init.constant_(self.outconv.bias, 0)
@@ -106,15 +98,12 @@ class DDA2(nn.Module):
         arm2 = self.arm2(pool2)
         arm2 = torch.mul(arm2 , avg_pool) 
 
-
         arm2 = self.up_arm2(arm2)
-    
         out = torch.cat((arm1, arm2), dim = 1) 
 
         out = self.ffm(out_sp, out) 
 
         out = self.up2(out)
-
         out = self.outconv(out)
         out = self.bn(out)
         out = self.relu(out)
@@ -140,7 +129,6 @@ class DDA3(nn.Module):
         self.bn = nn.BatchNorm2d(in_channels)
         self.relu = nn.ReLU(inplace = True)
         
-  
         nn.init.kaiming_normal_(self.outconv.weight, mode="fan_out", nonlinearity="relu")
         if self.outconv.bias is not None:
           nn.init.constant_(self.outconv.bias, 0)
@@ -159,16 +147,13 @@ class DDA3(nn.Module):
         arm2 = torch.mul(arm2 , avg_pool) 
 
         sizesp = out_sp.size()[-2:]
-
         arm2 = self.up_arm2(arm2)
     
         out = torch.cat((arm1, arm2), dim = 1) 
 
         out = self.ffm(out_sp, out) 
 
-
         out = self.up2(out)
-    
         out = self.outconv(out)
         out = self.bn(out)
         out = self.relu(out)
