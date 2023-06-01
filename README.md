@@ -12,3 +12,25 @@ the eyes, nose, and mouth, which are known to carry important information about 
 generate more meaningful representations of facial features
 and improve accuracy in emotion recognition tasks. Experiments on FER2013 and RAF-DB have demonstrated superior
 performance compared to existing state-of-the-art methods.
+
+## Experiments:
+
+|     Models            |     Pre-trained    |     FER2013 (%)    |     RAF-DB (%)    |       
+|-----------------------|--------------------|--------------------|-------------------|
+|     Resnet34          |     Image-Net      |     72.80%         |     86.70%        |
+|     Resnet50          |     Image-Net      |     73.40%         |     86.99%        |
+|     Resnet34 + DDA    |     Image-Net      |     74.75%         |     87.50%        |
+|     Resnet50 + DDA    |     Image-Net      |     73.72%         |     87.61%        |
+|     Resnet50          |     VGGface2       |     74.30%         |     88.90%        |
+|     Resnet50 + DDA    |     VGGface2       |     74.67%         |     89.96%        |
+
+## Alation study:
+
+|     <br>DDA in Stages    |         <br>Backbone        |      <br>RAF-DB (%)     |
+|:------------------------:|:---------------------------:|:-----------------------:|
+|    <br> Do not use DDA   |    <br>Resnet34<br>Resnet50 |    <br>86.70%<br>86.88% |
+|      <br> Stage 1,2      |    <br>Resnet34<br>Resnet50 |    <br>86.66%<br>86.76% |
+|     <br> Stage 1,2,3     |    <br>Resnet34<br>Resnet50 |    <br>86.57%<br>86.44% |
+|         <br>Stage 2,3,4  |    <br>Resnet34<br>Resnet50 |    <br>87.12%<br>86.73% |
+|       <br>Stage 3,4      |    <br>Resnet34<br>Resnet50 |    <br>87.35%<br>87.32% |
+|       <br>All stage      |    <br>Resnet34<br>Resnet50 |    <br>87.50%<br>87.61% |
