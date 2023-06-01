@@ -14,7 +14,7 @@ and improve accuracy in emotion recognition tasks. Experiments on FER2013 and RA
 performance compared to existing state-of-the-art methods.
 
 ## Experiments:
-
+These DDA blocks are tested when attached to Resnet networks and the results are shown in the table below
 |     Models            |     Pre-trained    |     FER2013 (%)    |     RAF-DB (%)    |        
 |-----------------------|--------------------|--------------------|-------------------|
 |     Resnet34          |     Image-Net      |     72.80%         |     86.70%        |
@@ -52,3 +52,5 @@ We benchmark our code thoroughly on two datasets: FER2013 and RAF-DB
 | LHC-Net             |    74.42%    | EfficientFace                    |    88.36%     |
 | **Resnet50+DDA (ours)** |    **74.67%**    | DAN                              |    89.70%     |
 | **Resnet34+DDA (ours)** |    **74.75%**    |   **ResNet-50 + DDA (ours)**    |    **89.96%**     |
+
+## Fusion Attention method with DDA:
