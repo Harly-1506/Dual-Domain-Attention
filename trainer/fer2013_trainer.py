@@ -121,22 +121,11 @@ class FER2013_Trainer(Trainer):
                       pin_memory=True, shuffle=False)
     
 
-    # define class_weight for loss_function and optimizer with imblance data
-    class_weights = [
-    1.02660468,
-    9.40661861,
-    1.00104606,
-    0.56843877,
-    0.84912748,
-    1.29337298,
-    0.82603942,
-    ]
-    class_weights = torch.FloatTensor(np.array(class_weights))
+
     
-    if self.configs["weighted_loss"] == 0 :
-      self.criterion = nn.CrossEntropyLoss().to(self.device)
-    else:
-      self.criterion = nn.CrossEntropyLoss(class_weights).to(self.device)
+
+    self.criterion = nn.CrossEntropyLoss().to(self.device)
+
 
     self.optimizer = torch.optim.RAdam(
       params=self.model.parameters(),
@@ -203,17 +192,6 @@ class FER2013_Trainer(Trainer):
       loss = self.criterion(y_pred, labels)
       acc = accuracy(y_pred, labels)[0]
       
-#       l1_weight = 0.001
-#       l2_weight = 0.001
-#       parameters = []
-#       for parameter in self.model.parameters():
-#           parameters.append(parameter.view(-1))
-#       l1 = l1_weight * torch.abs((torch.cat(parameters))).sum()
-#       l2 = l1_weight * torch.square((torch.cat(parameters))).sum()
-      
-      # Add L1 loss component
-#       loss += l1
-#       loss += l2
 
       train_loss += loss.item()
       train_acc += acc.item()
@@ -237,13 +215,6 @@ class FER2013_Trainer(Trainer):
     i += 1
     self.train_loss_list.append(train_loss / i)
     self.train_acc_list.append(train_acc / i)
-    # if self.wb == True:
-    # metric = {
-    #     " Loss" : self.train_loss_list[-1],
-    #     " Accuracy" :self.train_acc_list[-1],
-    #     "Learning_rate" : self.learning_rate
-    # }
-    # wandb.log(metric)
 
     print(" Loss: {:.4f}".format(self.train_loss_list[-1]), ", Accuracy: {:.2f}%".format(self.train_acc_list[-1]))
 
@@ -376,11 +347,7 @@ class FER2013_Trainer(Trainer):
       
       self.model.load_state_dict(state["net"])
 
-      # if not self.test_loader.is_ttau():
-      #   self.test_acc = self.acc_on_test()
-      # else:
-      #   self.test_acc = self.acc_on_test_ttau()
-      # self.test_acc_ttau = self.acc_on_test_ttau()
+
       print("----------------------Cal on Test-----------------------")
       self.test_acc = self.acc_on_test()
       self.test_acc_ttau = self.acc_on_test_ttau()
