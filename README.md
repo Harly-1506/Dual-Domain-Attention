@@ -28,12 +28,12 @@ performance compared to existing state-of-the-art methods.
 
 |     <br>DDA in Stages    |         <br>Backbone        |      <br>RAF-DB (%)     |
 |:------------------------:|:---------------------------:|:-----------------------:|
-|     Do not use DDA   |    <br>Resnet34<br>Resnet50 |    <br>86.70%<br>86.88% |
-|     Stage 1,2      |    <br>Resnet34<br>Resnet50 |    <br>86.66%<br>86.76% |
-|     Stage 1,2,3     |    <br>Resnet34<br>Resnet50 |    <br>86.57%<br>86.44% |
-|     Stage 2,3,4  |    <br>Resnet34<br>Resnet50 |    <br>87.12%<br>86.73% |
-|     Stage 3,4      |    <br>Resnet34<br>Resnet50 |    <br>87.35%<br>87.32% |
-|     All stage      |    <br>Resnet34<br>Resnet50 |    <br>87.50%<br>87.61% |
+|     Do not use DDA   |    Resnet34<br>Resnet50 |    86.70%<br>86.88% |
+|     Stage 1,2      |    Resnet34<br>Resnet50 |    86.66%<br>86.76% |
+|     Stage 1,2,3     |   Resnet34<br>Resnet50 |    86.57%<br>86.44% |
+|     Stage 2,3,4  |    Resnet34<br>Resnet50 |    87.12%<br>86.73% |
+|     Stage 3,4      |    Resnet34<br>Resnet50 |  87.35%<br>87.32% |
+|     All stage      |    Resnet34<br>Resnet50 |  87.50%<br>87.61% |
 
 ## Comparisons with Sota Methods:
 | Sota                | FER2013(%)       | Sota                             | RAF-DB(%)         |
