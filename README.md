@@ -38,10 +38,10 @@ performance compared to existing state-of-the-art methods.
 ## Comparisons with Sota Methods:
 | Sota                | FER2013(%)       | Sota                             | RAF-DB(%)         |
 |---------------------|------------------|----------------------------------|-------------------|
-| Inception           |    <br>71.60%    | RAN                              |    <br>86.90%     |
-| MLCNNs              |    <br>73.03%    | SCN                              |    <br>87.03%     |
-| Resnet50 + CBam     |    <br>73.39%    | DACL                             |    <br>87.78%     |
-| ResMaskingNet       |    <br>74.14%    | KTN                              |    <br>88.07%     |
-| LHC-Net             |    <br>74.42%    | EfficientFace                    |    <br>88.36%     |
-| **Resnet50+DDA (ours)** |    **<br>74.67%**    | DAN                              |    <br>89.70%     |
-| **Resnet34+DDA (ours)** |    **<br>74.75%**    |   ** <br>ResNet-50 + DDA (ours)**    |    **<br>89.96%**     |
+| Inception           |    71.60%    | RAN                              |    86.90%     |
+| MLCNNs              |    73.03%    | SCN                              |    87.03%     |
+| Resnet50 + CBam     |    73.39%    | DACL                             |    87.78%     |
+| ResMaskingNet       |    74.14%    | KTN                              |    88.07%     |
+| LHC-Net             |    74.42%    | EfficientFace                    |    88.36%     |
+| **Resnet50+DDA (ours)** |    **74.67%**    | DAN                              |    89.70%     |
+| **Resnet34+DDA (ours)** |    **74.75%**    |   **ResNet-50 + DDA (ours)**    |    **89.96%**     |
