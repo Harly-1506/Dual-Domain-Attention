@@ -15,7 +15,7 @@ performance compared to existing state-of-the-art methods.
 
 ## Experiments:
 
-|     Models            |     Pre-trained    |     FER2013 (%)    |     RAF-DB (%)    |       
+|     Models            |     Pre-trained    |     FER2013 (%)    |     RAF-DB (%)    |        
 |-----------------------|--------------------|--------------------|-------------------|
 |     Resnet34          |     Image-Net      |     72.80%         |     86.70%        |
 |     Resnet50          |     Image-Net      |     73.40%         |     86.99%        |
@@ -34,3 +34,14 @@ performance compared to existing state-of-the-art methods.
 |         <br>Stage 2,3,4  |    <br>Resnet34<br>Resnet50 |    <br>87.12%<br>86.73% |
 |       <br>Stage 3,4      |    <br>Resnet34<br>Resnet50 |    <br>87.35%<br>87.32% |
 |       <br>All stage      |    <br>Resnet34<br>Resnet50 |    <br>87.50%<br>87.61% |
+
+## Comparisons with Sota Methods:
+| Sota                | FER2013(%)       | Sota                             | RAF-DB(%)         |
+|---------------------|------------------|----------------------------------|-------------------|
+| Inception           |    <br>71.60%    | RAN                              |    <br>86.90%     |
+| MLCNNs              |    <br>73.03%    | SCN                              |    <br>87.03%     |
+| Resnet50 + CBam     |    <br>73.39%    | DACL                             |    <br>87.78%     |
+| ResMaskingNet       |    <br>74.14%    | KTN                              |    <br>88.07%     |
+| LHC-Net             |    <br>74.42%    | EfficientFace                    |    <br>88.36%     |
+| **Resnet50+DDA (ours)** |    **<br>74.67%**    | DAN                              |    <br>89.70%     |
+| **Resnet34+DDA (ours)** |    **<br>74.75%**    |   ** <br>ResNet-50 + DDA (ours)**    |    **<br>89.96%**     |
