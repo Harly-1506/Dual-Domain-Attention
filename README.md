@@ -54,3 +54,12 @@ We benchmark our code thoroughly on two datasets: FER2013 and RAF-DB
 | **Resnet34+DDA (ours)** |    **74.75%**    |   **ResNet-50 + DDA (ours)**    |    **89.96%**     |
 
 ## Fusion Attention method with DDA:
+- [Fusion Attention method](https://1drv.ms/b/s!Avr_XL5_YnvQhTpXv7KfVXE1acnT?e=jRH9sS) described in this [paper](https://1drv.ms/b/s!Avr_XL5_YnvQhTpXv7KfVXE1acnT?e=jRH9sS)
+- Results:
+
+|    <br>Fusion methods       |    <br>Model   1                                                                |    <br>Model   2                                                                      |    <br>RAF-DB   (%)                                          |
+|-------------------------------------|---------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|--------------------------------------------------------------|
+|    <br>Late   Fusion                |    Resnet18   <br>VGG11<br>VGG11<br>Resnet34<br>Resnet50+DDA (Image-net) |    Resnet34<br>VGG13<br>Resnet34<br>Resnet50+DDA<br>Resnet50+DDA (VGGface2)    |    86.35%<br>86.08%<br>86.08%<br>89.21%<br>89.66%<br>    |
+|    <br>Early   Fusion               | Resnet18<br>VGG13<br>VGG11<br>Resnet34<br>Resnet50+DDA (Image-net)           | Resnet34<br>Resnet34<br>Resnet34<br>Resnet50+DDA<br>Resnet50+DDA (VGGface2)        | 86.66%<br>85.49%<br>86.08%<br>88.97%<br>89.65%               |
+|    <br>Joint   fusion               |    Resnet18   <br>VGG13<br>VGG11<br>Resnet34<br>Resne50+DDA (Image-Net)  |    Resnet34<br>Resnet34<br>Resnet34<br>Resnet50+DDA<br>Resnet50+DDA (VGGface2) |    86.05%<br>86.63%<br>86.40%<br>89.70%<br>88.23%        |
+|    **<br>Fusion   attention (ours)    |    Resnet18   <br>VGG13<br>Resnet34<br>Resnet50+DDA (Image-net)          |    Resnet34   <br>Resnet34<br>Resnet50+DDA<br>Resnet50+DDA (VGGface2)          |    90.95%   <br>90.92%<br>92.54%<br>93.38% **            |
