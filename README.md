@@ -1,5 +1,5 @@
 
-# Dual-Domain-attention in Facial Expression Recoginition
+# Dual-Domain-Attention in Facial Expression Recoginition
 ## Summary:
 The code for Dual-Domain Attention ICIP2023 (submitting)
 
