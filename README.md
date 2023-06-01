@@ -55,7 +55,7 @@ We benchmark our code thoroughly on two datasets: FER2013 and RAF-DB
 
 ## Fusion Attention method with DDA:
 - [Fusion Attention method](https://1drv.ms/b/s!Avr_XL5_YnvQhTpXv7KfVXE1acnT?e=jRH9sS) described in this [paper](https://1drv.ms/b/s!Avr_XL5_YnvQhTpXv7KfVXE1acnT?e=jRH9sS)
-- Results:
+- Results: Other Fusion methods reduce the accuracy when combining Resnet models using DDA. Our proposed method has the highest results so far on the RAF-DB dataset
 
 |    <br>Fusion methods       |    <br>Model   1                                                                |    <br>Model   2                                                                      |    <br>RAF-DB   (%)                                          |
 |-------------------------------------|---------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|--------------------------------------------------------------|
