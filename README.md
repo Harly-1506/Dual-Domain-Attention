@@ -35,7 +35,14 @@ performance compared to existing state-of-the-art methods.
 |     Stage 3,4      |    Resnet34<br>Resnet50 |  87.35%<br>87.32% |
 |     All stage      |    Resnet34<br>Resnet50 |  87.50%<br>87.61% |
 
+This table can be
+concluded that the different stages play a complementary role
+in creating the best possible feature maps through the training
+process. The optimal results are obtained when all stages are
+used together with DDA
+
 ## Comparisons with Sota Methods:
+We benchmark our code thoroughly on two datasets: FER2013 and RAF-DB
 | Sota                | FER2013(%)       | Sota                             | RAF-DB(%)         |
 |---------------------|------------------|----------------------------------|-------------------|
 | Inception           |    71.60%    | RAN                              |    86.90%     |
