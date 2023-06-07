@@ -3,7 +3,8 @@
 ## Summary:
 The code for Dual-Domain Attention ICIP2023 (submitting)
 
-![Net](https://github.com/Harly-1506/Dual-Domain-Attention/assets/86733695/08522388-9483-4f61-9f61-586a514261d1)
+
+![Net](https://github.com/Harly-1506/Dual-Domain-Attention/assets/86733695/d1755a67-c51d-4ef8-815b-20e6388277db)
 
 **Abstract**: Attention mechanisms have become crucial in contemporary techniques for recognizing emotions through facial expressions. In this work, we proposed a novel dual-domain attention module incorporating local context in the spatial domain and global context in the context domain of feature maps. Our attention module is to learn residual attention
 from dual-domain feature maps for improving intermediate
@@ -67,7 +68,8 @@ We benchmark our code thoroughly on two datasets: FER2013 and RAF-DB
 ## Using DDA for emotion in context (EMOTIC dataset)
 - Reuse the trained DDA on the RAF-DB dataset to make a face feature extraction model extracted from the annotation of the EMOTIC dataset
 
-![Emotic_model](https://github.com/Harly-1506/Dual-Domain-Attention/assets/86733695/9a602c2e-2fd1-414e-9f06-1185c7919c5a)
+<!-- ![Emotic_model](https://github.com/Harly-1506/Dual-Domain-Attention/assets/86733695/9a602c2e-2fd1-414e-9f06-1185c7919c5a) -->
+![Emotic_model](https://github.com/Harly-1506/Dual-Domain-Attention/assets/86733695/86a25415-cb80-4855-af98-63bdc25da06e)
 
 - Result: only using body for training.
 
