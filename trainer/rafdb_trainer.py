@@ -1,3 +1,9 @@
+"""
+Author: Harly - Minh Hai Tran
+gmail: tranminhhai1506@gmail.com
+created day: 30/10/2022
+"""
+
 import numpy as np
 import datetime
 import os

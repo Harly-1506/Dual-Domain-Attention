@@ -1,3 +1,11 @@
+"""
+Author: Harly - Minh Hai Tran
+gmail: tranminhhai1506@gmail.com
+created day: 30/10/2022
+"""
+
+
+
 import torch
 import torch.nn as nn
 import math
