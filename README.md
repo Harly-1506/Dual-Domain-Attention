@@ -1,7 +1,7 @@
 
 # Dual-Domain-Attention in Facial Expression Recoginition
 ## Summary:
-The code for Dual-Domain Attention, this is one of my proposal in my graduation thesis for Facial Expression Recoginition, read for more [here](https://harly.vercel.app/graduation-thesis-facial-emotion-recognition-deep-learning-application-combines-attention)
+The code for Dual-Domain Attention, this is one of my proposal in my graduation thesis for Facial Expression Recoginition, read for my proposal more [here](https://harly.vercel.app/graduation-thesis-facial-emotion-recognition-deep-learning-application-combines-attention)
 
 
 ![Net](https://github.com/Harly-1506/Dual-Domain-Attention/assets/86733695/d1755a67-c51d-4ef8-815b-20e6388277db)
