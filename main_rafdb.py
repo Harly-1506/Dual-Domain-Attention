@@ -41,7 +41,7 @@ from trainer.rafdb_trainer_KFold import RAFDB_Trainer_KFold
 
 print(torch.__version__)
 
-config_path = "/kaggle/working/Research-Emotion/configs/config_rafdb.json"
+config_path = "configs/config_rafdb.json"
 
 configs = json.load(open(config_path))
 
