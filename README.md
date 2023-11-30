@@ -5,13 +5,17 @@ The code for Dual-Domain Attention, this is one of my proposal in my graduation 
 
 
 ![Net](https://github.com/Harly-1506/Dual-Domain-Attention/assets/86733695/d1755a67-c51d-4ef8-815b-20e6388277db)
+
+## Datasets
+- [FER2013](https://www.kaggle.com/competitions/challenges-in-representation-learning-facial-expression-recognition-challenge/overview)
+- [RAF-DB](http://www.whdeng.cn/raf/model1.html)
 ## How to train?
-- To train the model, you need to adjust the parameters in the configs file of each dataset if you want, then select the model in the main file of each dataset then run it.
+- To train the model, you need to adjust the parameters in the configs file of each dataset if you want, then select the model in the main file of each dataset then run it. Make sure you use the correct library in requirements.txt 
 ```python
-git clone https://github.com/Harly-1506/Dual-Domain-Attention.git
+!git clone https://github.com/Harly-1506/Dual-Domain-Attention.git
 %cd Dual-Domain-Attention
 #Choose your model and run:
-python main_fer2013.py #main_rafdb.py
+!python main_fer2013.py #main_rafdb.py
 ```
 ## Evaluation
 ```python
