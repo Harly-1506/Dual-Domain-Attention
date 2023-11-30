@@ -34,20 +34,17 @@ from models.vggnet_cbam import vgg16_cbam, vgg19_cbam
 from models.vggnet_cbam_pre import vgg16_cbam_pre, vgg16_bn_cbam_pre, vgg19_bn_cbam_pre, MultiFCVGGnetCBam
 from models.test_cbam import TestModel
 from models.resmasking import *
-from models.BamNetwork import *
-from models.New_model import *
-from models.Binetwork import *
-from models.ResNetVDSR import resnetvdsr_dropout1
+
 
 from utils.visualize.show_img import show_image_dataset
 from trainer.fer2013_trainer import FER2013_Trainer
 
-config_path = "/content/drive/MyDrive/WorkSpace/AI_Research/EmotionTorch/code/configs/config_fer2013.json"
+config_path = "configs/config_fer2013.json"
 configs = json.load(open(config_path))
 test_loader_ttau = FERDataset("test", configs, ttau = True, len_tta = 64) 
 
-model =  Binet_dropout1()
-state = torch.load("/content/drive/MyDrive/WorkSpace/AI_Research/EmotionTorch/checkpoints/Fer2013_trainers_Binet2_Resnet34_Bi18_adam_relu11_27_2022Nov27_04.57_74.171.57")
+model =  cbam_resnet50()
+state = torch.load("best_weight")
       
 model.load_state_dict(state["net"])
 
@@ -102,7 +99,7 @@ def plot_confusion_matrix(model, testloader,title = "My model"):
     plt.xlabel("Predicted Class", fontsize=12)
     plt.show()
 
-    plt.savefig("/content/drive/MyDrive/WorkSpace/AI_Research/EmotionTorch/checkpoints/best_fer.pdf")
+    plt.savefig("checkpoints/best_fer.pdf")
     plt.close()
       
 if __name__ == '__main__':
