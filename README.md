@@ -11,14 +11,14 @@ The code for Dual-Domain Attention, this is one of my proposal in my graduation 
 - [RAF-DB](http://www.whdeng.cn/raf/model1.html)
 ## How to train?
 - To train the model, you need to adjust the parameters in the configs file of each dataset if you want, then select the model in the main file of each dataset then run it. Make sure you use the correct library in requirements.txt 
-```python
-!git clone https://github.com/Harly-1506/Dual-Domain-Attention.git
-%cd Dual-Domain-Attention
+```python3
+git clone https://github.com/Harly-1506/Dual-Domain-Attention.git
+cd Dual-Domain-Attention
 #Choose your model and run:
-!python main_fer2013.py #main_rafdb.py
+python main_fer2013.py #main_rafdb.py
 ```
 ## Evaluation
-```python
+```python3
 python cm_rafdb.py
 ```
 ![CM_ResNet50_Vggface + DDA-1](https://github.com/Harly-1506/Dual-Domain-Attention/assets/86733695/9163ea8f-c16f-45b7-a896-d33b31f5f9cb)
