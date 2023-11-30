@@ -1,1 +1,14 @@
-
+numpy==1.21.6
+torch==1.12.1+cu113
+torchaudio==0.12.1+cu113
+torchsummary==1.5.1
+torchtext==0.13.1
+torchvision==0.13.1+cu113
+tornado==6.0.4
+tqdm==4.64.1
+wandb
+pytorchcv==0.0.67
+pandas==1.3.5
+opencv-contrib-python==4.6.0.66
+opencv-python-headless==4.6.0.66
+opencv-python==4.6.0.66
