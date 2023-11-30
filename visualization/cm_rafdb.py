@@ -44,7 +44,7 @@ from trainer.rafdb_trainer import RAFDB_Trainer
 from trainer.rafdb_trainer_KFold import RAFDB_Trainer_KFold
 
 
-config_path = "/kaggle/working/Research-Emotion/configs/config_rafdb.json"
+config_path = "configs/config_rafdb.json"
 
 configs = json.load(open(config_path))
 
@@ -52,7 +52,7 @@ test_loader_ttau = RafDataSet("test", configs, ttau = True, len_tta = 10)
 
 
 model =  DDAnet50_vggface_dropout2()
-state = torch.load("../weights/Rafdb_trainer_DDANet50_best_2023Jan31_05.49")
+state = torch.load("Rafdb_trainer_DDANet50_best_2023Jan31_05.49")
       
 model.load_state_dict(state["net"])
 
@@ -108,7 +108,7 @@ def plot_confusion_matrix(model, testloader,title = "My model"):
     plt.xlabel("Predicted Class", fontsize=12)
     plt.show()
 
-    plt.savefig("/kaggle/working//DDAnet50_vggface_RAFDB_CM.pdf")
+    plt.savefig("DDAnet50_vggface_RAFDB_CM.pdf")
     plt.close()
 if __name__ == '__main__':
   plot_confusion_matrix(model, test_loader_ttau)
