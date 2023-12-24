@@ -1,5 +1,5 @@
 
-# Dual-Domain-Attention in Facial Expression Recoginition
+# Dual-Domain-Attention in Facial Expression Recognition
 ![Static Badge](https://img.shields.io/badge/Pyhon-3.10.10-blue)
 ![Static Badge](https://img.shields.io/badge/Framework-Pytorch-Green)
 
