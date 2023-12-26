@@ -6,7 +6,7 @@
     "n_channels": 3,
     "n_classes": 7,
     "model": "ResNet50",
-    "lr": 1e-04,
+    "lr": 1e-03,
     "weighted_loss": 0,
     "device": "cuda:0",
     "momentum": 0.9,
