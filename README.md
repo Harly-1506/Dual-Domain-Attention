@@ -1,8 +1,10 @@
 
-# Dual-Domain-Attention in Facial Expression Recoginition
+# Dual-Domain-Attention in Facial Expression Recognition
 ![Static Badge](https://img.shields.io/badge/Pyhon-3.10.10-blue)
 ![Static Badge](https://img.shields.io/badge/Framework-Pytorch-Green)
 
+# Note: 
+The ideas in my thesis have been shared with another person and have been published at the 2023 ICIP conference and ASK conference at the same name in this repo, but I am not listed as an author (Even though it was my idea - proposed 1 and proposed 2). So, if you read a paper or a thesis with similar ideas, please note that I'm not the one who copied them :)
 
 ## Summary:
 The code for Dual-Domain Attention, this is one of my proposal in my graduation thesis for Facial Expression Recoginition, read for my proposal more [here](https://harly.vercel.app/graduation-thesis-facial-emotion-recognition-deep-learning-application-combines-attention)
